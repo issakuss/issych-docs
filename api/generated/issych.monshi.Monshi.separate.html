@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>issych.monshi.Monshi.separate &#8212; issych 0.0.6.0 documentation</title>
+    <title>issych.monshi.Monshi.separate &#8212; issych 0.0.6.1 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=c5733ed9"></script>
+    <script src="../../_static/documentation_options.js?v=610bbac0"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/issych.monshi.Monshi.separate';</script>
@@ -110,7 +110,7 @@
   
   
   
-    <p class="title logo__title">issych 0.0.6.0 documentation</p>
+    <p class="title logo__title">issych 0.0.6.1 documentation</p>
   
 </a></div>
     
@@ -132,8 +132,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../tutorial.html">
-    Tutorial（まだ）
+  <a class="nav-link nav-internal" href="../../tutorial/index.html">
+    Tutorial
   </a>
 </li>
 
@@ -225,8 +225,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../tutorial.html">
-    Tutorial（まだ）
+  <a class="nav-link nav-internal" href="../../tutorial/index.html">
+    Tutorial
   </a>
 </li>
 
@@ -404,24 +404,16 @@
 ４通りの指定方法があります。</p>
 <ul class="simple">
 <li><ol class="arabic simple">
-<li><p>列を0始まりの数字で指定する（非推奨）</p></li>
+<li><p>列を1始まりの数字で指定する</p></li>
 </ol>
 </li>
 </ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>または</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">))]</span>
-<span class="go">などとすると、3列目から7列目までが指定されます。</span>
-<span class="go">数字は0から始まるので、2列目から6列までではありません。</span>
-</pre></div>
-</div>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>この方法は非推奨としています。
-<code class="docutils literal notranslate"><span class="pre">.score()</span></code> メソッドでは1始まりの数字を指定する箇所もありややこしいためです。</p>
-</div>
+<p>数字が1から始まることに注意してください。
+一番左の列は0ではなく1です。
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.iloc()</span></code> などで指定する際と異なります。</p>
 <ul class="simple">
 <li><ol class="arabic simple" start="2">
 <li><p>列をアルファベットで指定する</p></li>
